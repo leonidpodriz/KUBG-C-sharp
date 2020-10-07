@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace laboratory_work_16_17
+namespace laboratory_works
 {
     class Course
     {
