@@ -6,8 +6,8 @@ namespace laboratory_works
 {
     class Course
     {
-        String name, time;
-        int price, hours, level;
+        protected String name, time;
+        protected int price, hours, level;
 
         public Course()
         {
@@ -111,6 +111,43 @@ namespace laboratory_works
                 hashCode = (hashCode * 397) ^ hours.GetHashCode();
                 return hashCode;
             }
+        }
+    }
+
+    // Необхідно описати похідний клас для створення об’єктів з заданими полями.Похідний клас
+    // має містити додаткові поля, конструктори для ініціалізації об’єктів (без параметрів та з
+    // параметрами) та властивості для встановлення всіх полів об’єкту.Набір методів довільний
+    // (за власним бажанням).
+
+    class ExtendedCourse : Course
+    {
+        protected int hours_per_week;
+        protected String address;
+        public ExtendedCourse() { }
+        public ExtendedCourse(String name, String time, int price, int level, int hours, int hours_per_week, String address)
+        {
+            this.price = price;
+            this.hours = hours;
+            this.level = level;
+            this.name = name;
+            this.time = time;
+            this.hours_per_week = hours_per_week;
+            this.address = address;
+        }
+
+        public void setHoursPerWeek(int hours_per_week)
+        {
+            this.hours_per_week = hours_per_week;
+        }
+
+        public void setAddress(String address)
+        {
+            this.address = address;
+        }
+
+        public override string ToString()
+        {
+            return $"{name} : {calculate_price()} UAH at {time} (Addres: {address})";
         }
     }
 }

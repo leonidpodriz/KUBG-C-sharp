@@ -6,6 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Reference Include="Course">
+      <HintPath>..\..\Course\Course\bin\Debug\netstandard2.0\Course.dll</HintPath>
+    </Reference>
     <Reference Include="PersonDDL">
       <HintPath>..\..\PersonDDL\PersonDDL\bin\Debug\netstandard2.0\PersonDDL.dll</HintPath>
     </Reference>

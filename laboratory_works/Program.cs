@@ -1,4 +1,5 @@
 ﻿using System;
+using Course;
 
 namespace laboratory_works
 {
@@ -6,7 +7,24 @@ namespace laboratory_works
     {
         static void Main(string[] args)
         {
-            LabWork18();
+            LabWork19();
+        }
+
+        static void LabWork19()
+        {
+            // Написати програму(проект) для роботи з об’єктами похідного класу згідно із обраним
+            // варіантом(під’єднати бібліотеку ваших класів).Створити не менше трьох об’єктів похідного
+            // класу з використанням різних конструкторів.Задати значення характеристик для об’єктів.
+            // Вивести на екран значення характеристик об’єктів.
+
+            ExtendedCourseDDL course_1 = new ExtendedCourseDDL();
+            ExtendedCourseDDL course_2 = new ExtendedCourseDDL("Python Starter", "19:00", 200, 0, 3, 50, "st. Test, 54");
+            ExtendedCourseDDL course_3 = new ExtendedCourseDDL("C# Advanced", "18:00", 500, 3, 3, 50, "st. Test, 3");
+
+
+            Console.WriteLine(course_1);
+            Console.WriteLine(course_2);
+            Console.WriteLine(course_3);
         }
 
         static void LabWork18()
